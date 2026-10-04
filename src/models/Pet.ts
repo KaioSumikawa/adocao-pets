@@ -15,14 +15,14 @@ export interface PetAttributes {
 export type PetCreationAttributes = Optional<PetAttributes, 'id'>;
 
 export class Pet extends Model<PetAttributes, PetCreationAttributes> implements PetAttributes {
-    public id!: number;
-    public nome!: string;
-    public especie!: string;
-    public idade!: number;
-    public adotado!: boolean;
+    declare id: number;
+    declare nome: string;
+    declare especie: string;
+    declare idade: number;
+    declare adotado: boolean;
 
-    public readonly createdAt!: Date;
-    public readonly updatedAt!: Date;
+    declare readonly createdAt: Date;
+    declare readonly updatedAt: Date;
 }
 
 Pet.init(
